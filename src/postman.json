@@ -1,0 +1,295 @@
+{
+    "info": {
+        "name": "News Aggregator API",
+        "_postman_id": "12345678-1234-1234-1234-123456789012",
+        "description": "Collection for testing News Aggregator API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "User Registration",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"testpassword\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/api/register",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "register"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "User Login",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"testpassword\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Preferences",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer <your_jwt_token>",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:3000/api/preferences",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "preferences"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update Preferences",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer <your_jwt_token>",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"categories\": [\"technology\", \"sports\"],\n    \"languages\": [\"en\", \"es\"]\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/api/preferences",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "preferences"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get News",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer <your_jwt_token>",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:3000/api/news",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "news"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Mark Article as Read",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer <your_jwt_token>",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:3000/api/news/:id/read",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "news",
+                        ":id",
+                        "read"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Mark Article as Favorite",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer <your_jwt_token>",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:3000/api/news/:id/favorite",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "news",
+                        ":id",
+                        "favorite"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Read Articles",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer <your_jwt_token>",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:3000/api/news/read",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "news",
+                        "read"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Favorite Articles",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer <your_jwt_token>",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:3000/api/news/favorites",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "news",
+                        "favorites"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Search News",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer <your_jwt_token>",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:3000/api/news/search/:keyword",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "news",
+                        "search",
+                        ":keyword"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
